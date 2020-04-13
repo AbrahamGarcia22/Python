@@ -1,12 +1,14 @@
-def fib(n):
-    if n==1:
-        return(1)
-    if n==0:
-        return(0)
-    return(fib(n-1)+fib(n-2))
-print(fib(35))
-def s(a=1,b=2):
-    return a+b
-print (s())
-import holamundo
-holamundo.fun(2)
+import random
+class SumaDos:
+    def __init__(self,datos):
+        self.datos=datos
+        self.indice=0
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.indice==len(self.datos):
+            raise StopIteration()
+        elemento=self.datos[self.indice]+2
+        self.indice+=1
+        return elemento
+print(list(SumaDos([1,2,3,4,5])))
