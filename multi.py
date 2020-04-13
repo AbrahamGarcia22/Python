@@ -1,6 +1,12 @@
-a=input("Dame el primer numero ")
-b=input("Dame el segundo numero ")
-a=int(a)
-b=int(b)
-c=a*b
-print('La multiplicacion es',c)
+def fib(n):
+    if n==1:
+        return(1)
+    if n==0:
+        return(0)
+    return(fib(n-1)+fib(n-2))
+print(fib(35))
+def s(a=1,b=2):
+    return a+b
+print (s())
+import holamundo
+holamundo.fun(2)
